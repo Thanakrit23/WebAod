@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans' sans-serif;
+}
+body {
+    height: 100vh;
+    background-color: rgb(182, 65, 70);
+    background-image: url('https://www.jps2013.com/wp-content/uploads/2020/10/FRE-B-6.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.hero{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #259cb9;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(255, 72, 0);
+    font-size: 1.4rem;
+}
+a:hover {
+    color:rgb(49, 199, 44)
+}
+/* HEADER */
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 90px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: aliceblue;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.acton_btn {
+    background-color: rgb(201, 93, 30);
+    color: aliceblue;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.acton_btn:hover {
+    scale: 1.05;
+    color: blue;
+}
+
+.acton_btn:active {
+    scale: 0.9;
+    color: blueviolet;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, .032, 1.1275);
+}
+.dropdown_menu .open {
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* HERO */
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #0fe6e6;
+}
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.media-icons{
+    z-index: 800;
+    position: absolute;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+.media-icons a{
+    color: #dcf30c;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+.media-icons a:not(:last-child){
+    margin-bottom: 20px;
+}
+.media-icons a:hover{
+    color: blueviolet;
+    transform: scale(1.5);
+}
+.media-icons1{
+    z-index: 800;
+    position: absolute;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+.media-icon1 a{
+    color: #17ec33;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+.media-icons1 a:not(:last-child){
+    margin-bottom: 20px;
+}
+.media-icons1 a:hover{
+    color: rgb(70, 39, 209);
+    transform: scale(1.5);
+}
+
+/* RESPONSIVE DESIZE */
+@media (max-width: 990px) {
+    .navbar .links
+    .navbar .action_btn {
+        display: none;
+    }
+.navbar .toggle_btn {
+    display: block;
+}
+.dropdown_menu {
+    display: block;
+}
+}
+@media (max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
